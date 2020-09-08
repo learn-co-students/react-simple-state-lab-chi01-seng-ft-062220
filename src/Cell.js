@@ -21,16 +21,6 @@ class Cell extends React.Component {
   }
 
 
-// In render, the cell should set the background color in-line for the <div> 
-// by adding the following attribute: style={{backgroundColor: '#FFF'}} 
-// ('#FFF' is just used as an example value here - the value should be state's color)
-  render(){
-    return <div className = "cell" 
-    style={{backgroundColor: this.state.color}} 
-    onClick={this.clickUpdateColor}>
-    </div>
-  }
-
 
 // Create a click listener which, when activated, 
 // updates the state to the following hex value: '#333'
@@ -41,5 +31,19 @@ class Cell extends React.Component {
     color:"#333"
   })
   }
+
+  // In render, the cell should set the background color in-line for the <div> 
+// by adding the following attribute: style={{backgroundColor: '#FFF'}} 
+// ('#FFF' is just used as an example value here - the value should be state's color)
+render(){
+  return <div className = "cell" 
+  style={{backgroundColor: this.state.color}} 
+  onClick={this.clickUpdateColor}>
+  </div>
 }
+}
+
+
+
+
 export default Cell;
